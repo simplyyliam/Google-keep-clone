@@ -7,9 +7,12 @@
 }
 
 /* Base styling */
-body {
+body, html {
+  scroll-behavior: smooth;
   font-family: "Google Sans", Roboto, Arial, sans-serif;
   color: #202124;
+  overflow: hidden;
+
 }
 
 .container {
@@ -25,7 +28,6 @@ body {
   background: white;
   padding: 8px 16px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  position: sticky;
   top: 0;
   z-index: 10;
   gap: 16px;
@@ -148,6 +150,8 @@ button {
 /* Notes container */
 .notes-container {
   display: flex;
+  width: 100%;
+  height: 100vh;
 }
 
 /* Sidebar (placeholder for now) */
@@ -160,12 +164,29 @@ button {
 }
 
 /* Notes view */
+
+.notes-content-view {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh
+}
+
 .notes-view {
   flex: 1;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 16px;
   padding: 24px;
+}
+
+/* Note creation modal */
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5em;
+  height: max-content;
 }
 
 /* Note card */
