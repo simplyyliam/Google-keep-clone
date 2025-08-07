@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styling */
+body {
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  color: #202124;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Navbar */
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 8px 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  gap: 16px;
+}
+
+/* --- Left Section --- */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hamburger > svg {
+  width: 24px;
+  height: 24px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: #5f6368;
+}
+
+.logo-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- Center Section --- */
+.search-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  background: #f1f3f4;
+  border-radius: 8px;
+  padding: 15px 12px;
+  width: 100%;
+  max-width: 720px;
+}
+
+.search-form svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.search-form input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+}
+
+/* --- Right Sections --- */
+
+/* Actions (apps, notifications, settings) */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.display-picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  width: 3em;
+  height: 3em;
+  background-color: rgb(199, 66, 49);
+}
+
+
+.display-picture::after {
+  content: "S";
+  color: #fff;
+  font-weight: 600;
+}
+
+
+/* Buttons */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+  transition: background-color 0.2s;
+}
+
+.nav-btn:hover, .tool-btn:hover {
+  background-color: #eeeeee;
+}
+
+/* Notes container */
+.notes-container {
+  display: flex;
+}
+
+/* Sidebar (placeholder for now) */
+.sidebar {
+  width: 240px;
+  padding: 16px;
+  background: #fff;
+  min-height: 100vh;
+  box-shadow: 1px 0 3px rgba(0,0,0,0.1);
+}
+
+/* Notes view */
+.notes-view {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  padding: 24px;
+}
+
+/* Note card */
+.note-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  height: max-content;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: box-shadow 0.2s;
+}
+
+.note-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.note-card h2 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.note-card p {
+  font-size: 14px;
+  color: #5f6368;
+}
+
+.note-tools {
+  display: flex;
+
+}
+
+.tool-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+  border-radius: 100%;
+  cursor: pointer;
+}
